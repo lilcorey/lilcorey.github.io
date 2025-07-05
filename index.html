@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>corey</title>
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata&amp;display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Edelman</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&amp;display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inconsolata to the body and ensure it's a monospace fallback */
+        body {
+            font-family: 'Inconsolata', monospace;
+            background-color: #f0f0f0; /* Light grey background */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            color: #333; /* Dark grey text color */
+            line-height: 1.6;
+        }
+
+        /* Basic container styling */
+        .container-wrapper {
+            max-width: 700px;
+            padding: 20px;
+            background-color: #ffffff; /* White background for content */
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Center align content within the box */
+        }
+
+        .header {
+            display: block; /* Make it a block to take full width */
+            font-size: 1.8em; /* Larger font for the header link */
+            font-weight: bold;
+            color: #007bff; /* A nice blue for links */
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee; /* Separator line */
+        }
+
+        .header:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+
+        .profile-content {
+            padding: 20px 0;
+        }
+
+        h3 {
+            font-size: 2.2em; /* Larger heading for name */
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        p a {
+            color: #007bff; /* Link color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: #0056b3; /* Darker link color on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container-wrapper {
+                padding: 15px;
+                margin: 15px;
+            }
+            .header {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div>
-		<div>
-			<a class="header" href="/">edelman.io</a>
-			<div class="center">
-				<div>
-					<h3>Corey Edelman</h3>
-					<p>Hey, I'm Corey. I currently work as a Software Engineer in Seattle. I enjoy learning all things software engineering. I'm currently interested in graphs, ontologies, and knowledge systems.</p>
-					<p>GitHub <a rel="noopener noreferrer" target="_blank" href="https://github.com/lilcorey">@lilcorey</a>
-						| LinkedIn <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/corey-edelman">@corey-edelman</a> 
-						| Email <a rel="noopener noreferrer" href="mailto:cedelma@g.clemson.edu?subject=edelman.io">me</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container-wrapper">
+        <a class="header" href="/">edelman.io</a>
+        <div class="profile-content">
+            <h3>Corey Edelman</h3>
+            <p>Hey, I'm Corey. I currently work as a Software Engineer in Seattle. I enjoy learning all things software engineering. I'm currently interested in graphs, ontologies, and knowledge systems.</p>
+            <p>
+                GitHub <a rel="noopener noreferrer" target="_blank" href="https://github.com/lilcorey">@lilcorey</a>
+                | LinkedIn <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/corey-edelman">@corey-edelman</a>
+                | Email <a rel="noopener noreferrer" href="mailto:corey@edelman.io?subject=edelman.io">me</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
