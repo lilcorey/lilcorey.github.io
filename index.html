@@ -11,22 +11,25 @@
             font-family: 'Inconsolata', monospace;
             background-color: #f0f0f0; /* Light grey background */
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange items vertically */
+            min-height: 100vh; /* Ensure body takes at least full viewport height */
             color: #333; /* Dark grey text color */
             line-height: 1.6;
         }
 
-        /* Basic container styling */
+        /* Main content wrapper now fills the screen */
         .container-wrapper {
-            max-width: 700px;
-            padding: 20px;
+            width: 100%; /* Take full width */
+            flex-grow: 1; /* Allows it to grow and fill available space */
+            padding: 20px; /* Add padding directly */
             background-color: #ffffff; /* White background for content */
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            /* Removed border-radius and box-shadow for full-screen effect */
             text-align: center; /* Center align content within the box */
+            display: flex; /* Use flexbox for inner content centering */
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
         }
 
         .header {
@@ -38,6 +41,8 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid #eee; /* Separator line */
+            width: 100%; /* Ensure header line spans full width */
+            max-width: 600px; /* Constrain header width for better readability */
         }
 
         .header:hover {
@@ -45,7 +50,9 @@
         }
 
         .profile-content {
-            padding: 20px 0;
+            padding: 20px; /* Add padding to content */
+            max-width: 600px; /* Constrain content width for better readability */
+            width: 100%; /* Ensure it takes full width up to max-width */
         }
 
         h3 {
@@ -70,11 +77,21 @@
             text-decoration: underline; /* Underline on hover */
         }
 
+        /* Footer styling */
+        .footer {
+            background-color: #333; /* Dark background for the footer */
+            color: #f0f0f0; /* Light text color */
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: auto; /* Pushes the footer to the bottom */
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
         /* Responsive adjustments */
         @media (max-width: 600px) {
             .container-wrapper {
                 padding: 15px;
-                margin: 15px;
             }
             .header {
                 font-size: 1.5em;
@@ -85,12 +102,14 @@
             p {
                 font-size: 1em;
             }
+            .profile-content {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container-wrapper">
-        <a class="header" href="/">edelman.io</a>
         <div class="profile-content">
             <h3>Corey Edelman</h3>
             <p>Hey, I'm Corey. I currently work as a Software Engineer in Seattle. I enjoy learning all things software engineering. I'm currently interested in graphs, ontologies, and knowledge systems.</p>
